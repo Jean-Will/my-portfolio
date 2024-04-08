@@ -15,7 +15,7 @@ const NavBar= () => {
       <>
       <AppBar position="absolute">
         <StyledtToolBar>
-        <MenuItem ><link href="https://retirement-react-js.netlify.app/"></link> ABOUT </MenuItem>
+        <MenuItem component="a" href="https://github.com/Jean-Will"> ABOUT </MenuItem>
         <MenuItem>SKILLS </MenuItem>
         <MenuItem>PROJECTS </MenuItem>
         </StyledtToolBar>

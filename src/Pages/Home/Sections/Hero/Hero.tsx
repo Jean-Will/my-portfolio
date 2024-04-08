@@ -67,7 +67,7 @@ const Hero = () => {
                   justifyContent="center"
                 >
                   <Button color="secondary" > 
-                  <a href="../" download style={{textDecoration:"none"}}>
+                  <a href="/Components/Pdf/JeanWill_Eng" download style={{textDecoration:"none"}}>
                   <DownloadIcon />
                     <Typography>DOWLOAD CV</Typography>
                   </a>
