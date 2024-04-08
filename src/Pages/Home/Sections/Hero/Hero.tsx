@@ -5,6 +5,7 @@ import EmailIcon from '@mui/icons-material/Email';
 import { useState, useEffect } from "react";
 
 
+
 const Hero = () => {
 
 
@@ -66,10 +67,19 @@ const Hero = () => {
     },
   }));
 
-  const StyledImg = styled("img")(() => ({
+  const StyledImg = styled("img")(({theme}) => ({
     width: "80%",
-    borderRadius: "30%",
-    border: "1px solid",
+    borderRadius: "18%",
+    
+    [theme.breakpoints.up("xs")]: {
+      //<=mobile
+      width:"55%"
+      
+    },
+    [theme.breakpoints.up("md")]: {
+      //=> mobile
+      width:"70%"
+    },
   }));
 
   return (
