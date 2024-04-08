@@ -28,7 +28,7 @@ const Hero = () => {
         }
         return prevText + textToType[index++]; // Adiciona o próximo caractere ao texto
       });
-    }, 150); // Velocidade de digitação em milissegundos
+    }, 170); // Velocidade de digitação em milissegundos
   
     const startTyping = () => {
       index = 0; // Reinicia o índice quando a mensagem é totalmente digitada
@@ -53,6 +53,7 @@ const Hero = () => {
     };
   }, []); // Array vazio para garantir que o useEffect seja executado apenas uma vez
 
+  
   const StyledHero = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     height: "100vh",
