@@ -2,14 +2,56 @@ import { styled , Grid, Container, Typography , Button} from "@mui/material"
 import profile from "../../../../assets/Images/pofile.jpg"
 import DownloadIcon from '@mui/icons-material/Download';
 import EmailIcon from '@mui/icons-material/Email';
-
-
-
-
-
+import { useState, useEffect } from "react";
 
 
 const Hero = () => {
+
+
+  const [typedText, setTypedText] = useState('');
+  
+  useEffect(() => {
+    const textToType = "I'm a Software Developer";
+    let index = 0;
+  
+    const typingInterval = setInterval(() => {
+      setTypedText(prevText => {
+        if (index === textToType.length) {
+          clearInterval(typingInterval); // Limpa o intervalo quando a mensagem é totalmente digitada
+          setTimeout(() => { // Define um timeout para limpar o texto após 15 segundos
+            setTypedText('');
+            // Reinicia a digitação após o intervalo de 15 segundos
+            startTyping();
+          }, 15000); // Tempo de espera em milissegundos (15 segundos)
+          return prevText; // Mantém o texto atual enquanto espera
+        }
+        return prevText + textToType[index++]; // Adiciona o próximo caractere ao texto
+      });
+    }, 150); // Velocidade de digitação em milissegundos
+  
+    const startTyping = () => {
+      index = 0; // Reinicia o índice quando a mensagem é totalmente digitada
+      setInterval(() => {
+        setTypedText(prevText => {
+          if (index === textToType.length) {
+            clearInterval(typingInterval); // Limpa o intervalo quando a mensagem é totalmente digitada
+            setTimeout(() => { // Define um timeout para limpar o texto após 15 segundos
+              setTypedText('');
+              // Reinicia a digitação após o intervalo de 15 segundos
+              startTyping();
+            }, 15000); // Tempo de espera em milissegundos (15 segundos)
+            return prevText; // Mantém o texto atual enquanto espera
+          }
+          return prevText + textToType[index++]; // Adiciona o próximo caractere ao texto
+        });
+      }, 150); // Velocidade de digitação em milissegundos
+    };
+  
+    return () => {
+      clearInterval(typingInterval); // Limpa o intervalo quando o componente é desmontado
+    };
+  }, []); // Array vazio para garantir que o useEffect seja executado apenas uma vez
+
   const StyledHero = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     height: "100vh",
@@ -45,16 +87,16 @@ const Hero = () => {
                 textAlign="center"
                 pb={2}
               >
-                {" "}
-                Jean Will{" "}
+                
+                Jean Will
               </Typography>
               <Typography
                 color="primary.contrastText"
                 variant="h2"
                 textAlign="center"
               >
-                {" "}
-                I'm a Software Developer{" "}
+                
+                {typedText}
               </Typography>
               <Grid container display="flex" justifyContent="center" pt={3}>
                 <Grid

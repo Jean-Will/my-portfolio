@@ -5,7 +5,8 @@ const NavBar= () => {
   
     const StyledtToolBar = styled(Toolbar)(() => ({
         display:"flex",
-        justifyContent:"space-evenly"
+        justifyContent:"space-evenly",
+        
        
     
       }));
