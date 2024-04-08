@@ -8,29 +8,26 @@ import EmailIcon from '@mui/icons-material/Email';
 
 
 
+
 const Hero = () => {
-
-
-
   const StyledHero = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     height: "100vh",
     display: "flex",
-    alignItems:"center",
-    [theme.breakpoints.up("xs")]: {//<=mobile 
-      paddingTop:"100px"
-    
+    alignItems: "center",
+    [theme.breakpoints.up("xs")]: {
+      //<=mobile
+      paddingTop: "100px",
     },
-    [theme.breakpoints.up("md")]: { //=> mobile 
-    
-    }
-
+    [theme.breakpoints.up("md")]: {
+      //=> mobile
+    },
   }));
 
   const StyledImg = styled("img")(() => ({
     width: "80%",
     borderRadius: "30%",
-    border: "1px solid"
+    border: "1px solid",
   }));
 
   return (
@@ -45,7 +42,8 @@ const Hero = () => {
               <Typography
                 color="primary.contrastText"
                 variant="h1"
-                textAlign="center" pb={2}
+                textAlign="center"
+                pb={2}
               >
                 {" "}
                 Jean Will{" "}
@@ -53,12 +51,12 @@ const Hero = () => {
               <Typography
                 color="primary.contrastText"
                 variant="h2"
-                textAlign="center" 
+                textAlign="center"
               >
                 {" "}
-                I'm a Software Developer {" "}
+                I'm a Software Developer{" "}
               </Typography>
-              <Grid container display="flex" justifyContent="center" pt={3} >
+              <Grid container display="flex" justifyContent="center" pt={3}>
                 <Grid
                   item
                   xs={12}
@@ -66,11 +64,15 @@ const Hero = () => {
                   display="flex"
                   justifyContent="center"
                 >
-                  <Button color="secondary" > 
-                  <a href="/Components/Pdf/JeanWill_Eng" download style={{textDecoration:"none"}}>
-                  <DownloadIcon />
-                    <Typography>DOWLOAD CV</Typography>
-                  </a>
+                  <Button color="secondary">
+                    <a
+                      href="/Components/Pdf/JeanWill_Eng"
+                      download
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <DownloadIcon />
+                      <Typography>DOWLOAD CV</Typography>
+                    </a>
                   </Button>
                 </Grid>
                 <Grid
@@ -80,9 +82,11 @@ const Hero = () => {
                   display="flex"
                   justifyContent="center"
                 >
-                  <Button color="secondary" >
+                  <Button color="secondary"  style={{textDecoration:"none"}}>
+                    <a href="mailto:jeanwill93@hotmail.com"  style={{ textDecoration: "none", color: "inherit" }} >
                     <EmailIcon />
                     <Typography>Contact me</Typography>
+                    </a>
                   </Button>
                 </Grid>
               </Grid>
