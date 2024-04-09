@@ -2,10 +2,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 75vh;
     gap: 50px;
     margin-top: 0px;
-    background: linear-gradient(45deg,#bbbbbb , #aaaaaa, #969595, #414141 ,#202020 , #212121);
+    margin-bottom: 0px;
+    background: linear-gradient(45deg, #aaaaaa, #969595, #414141 ,#202020 , #212121);
     background-size: 300% 300%;
     animation: gradientAnimation 15s  ease infinite ;
   }

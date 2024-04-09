@@ -1,14 +1,24 @@
-import { Typography, Card, CardActionArea, CardMedia, CardContent } from "@mui/material";
+import { Typography, Card, CardActionArea, CardMedia, CardContent , styled } from "@mui/material";
 import Avatar from "../../../../assets/Images/avatar.jpg";
 import "./About.css";
 
 const About = () => {
+
+  const StyledAbout = styled("div")(({ theme }) => ({
+    
+    [theme.breakpoints.up("xs")]: {
+      
+    },
+    [theme.breakpoints.up("md")]: {},
+  }));
+
   return (
     <>
+    <StyledAbout>
       <div className="container">
         <div className="elemento card-animation">
           
-          <Card sx={{ maxWidth: 350 }}>
+          <Card sx={{ maxWidth: 300 ,  }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -28,7 +38,7 @@ const About = () => {
           </Card>
         </div>
         <div className="elemento card-animation">
-          <Card sx={{ maxWidth: 350, }}>
+          <Card sx={{ maxWidth: 300, }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -48,6 +58,7 @@ const About = () => {
           </Card>
         </div>
       </div>
+      </StyledAbout>
     </>
   );
 };
