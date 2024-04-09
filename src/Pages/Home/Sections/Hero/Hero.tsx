@@ -1,85 +1,73 @@
-import { styled , Grid, Container, Typography , Button} from "@mui/material"
-import profile from "../../../../assets/Images/pofile.jpg"
-import DownloadIcon from '@mui/icons-material/Download';
-import EmailIcon from '@mui/icons-material/Email';
+import { styled, Grid, Container, Typography, Button } from "@mui/material";
+import profile from "../../../../assets/Images/pofile.jpg";
+import DownloadIcon from "@mui/icons-material/Download";
+import EmailIcon from "@mui/icons-material/Email";
 import { useState, useEffect } from "react";
 
-
-
 const Hero = () => {
+  const [typedText, setTypedText] = useState("");
 
-
-  const [typedText, setTypedText] = useState('');
-  
   useEffect(() => {
     const textToType = "I'm a Software Developer";
     let index = 0;
-  
     const typingInterval = setInterval(() => {
-      setTypedText(prevText => {
+      setTypedText((prevText) => {
         if (index === textToType.length) {
-          clearInterval(typingInterval); // Limpa o intervalo quando a mensagem é totalmente digitada
-          setTimeout(() => { // Define um timeout para limpar o texto após 15 segundos
-            setTypedText('');
-            // Reinicia a digitação após o intervalo de 15 segundos
-            startTyping();
-          }, 15000); // Tempo de espera em milissegundos (15 segundos)
-          return prevText; // Mantém o texto atual enquanto espera
+          clearInterval(typingInterval);
+          setTimeout(() => {
+            setTypedText("");
+            startTyping(); // reinicia a digitação após o intervalo de 15 segundos
+          }, 15000);
+          return prevText;
         }
-        return prevText + textToType[index++]; // Adiciona o próximo caractere ao texto
+        return prevText + textToType[index++];
       });
-    }, 170); // Velocidade de digitação em milissegundos
-  
-    const startTyping = () => {
-      index = 0; // Reinicia o índice quando a mensagem é totalmente digitada
-      setInterval(() => {
-        setTypedText(prevText => {
-          if (index === textToType.length) {
-            clearInterval(typingInterval); // Limpa o intervalo quando a mensagem é totalmente digitada
-            setTimeout(() => { // Define um timeout para limpar o texto após 15 segundos
-              setTypedText('');
-              // Reinicia a digitação após o intervalo de 15 segundos
-              startTyping();
-            }, 15000); // Tempo de espera em milissegundos (15 segundos)
-            return prevText; // Mantém o texto atual enquanto espera
-          }
-          return prevText + textToType[index++]; // Adiciona o próximo caractere ao texto
-        });
-      }, 150); // Velocidade de digitação em milissegundos
-    };
-  
-    return () => {
-      clearInterval(typingInterval); // Limpa o intervalo quando o componente é desmontado
-    };
-  }, []); // Array vazio para garantir que o useEffect seja executado apenas uma vez
+    }, 170);
 
-  
+    return () => {
+      clearInterval(typingInterval);
+    };
+  }, []);
+
+  // Função para iniciar a digitação
+  const startTyping = () => {
+    const textToType = "I'm a Software Developer";
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      setTypedText((prevText) => {
+        if (index === textToType.length) {
+          clearInterval(typingInterval);
+          setTimeout(() => {
+            setTypedText("");
+            startTyping(); // reinicia a digitação após o intervalo de 15 segundos
+          }, 15000);
+          return prevText;
+        }
+        return prevText + textToType[index++];
+      });
+    }, 170);
+  };
+
   const StyledHero = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     height: "100vh",
     display: "flex",
     alignItems: "center",
     [theme.breakpoints.up("xs")]: {
-      //<=mobile
       paddingTop: "100px",
     },
-    [theme.breakpoints.up("md")]: {
-      //=> mobile
-    },
+    [theme.breakpoints.up("md")]: {},
   }));
 
-  const StyledImg = styled("img")(({theme}) => ({
+  const StyledImg = styled("img")(({ theme }) => ({
     width: "80%",
     borderRadius: "18%",
-    
+
     [theme.breakpoints.up("xs")]: {
-      //<=mobile
-      width:"55%"
-      
+      width: "55%",
     },
     [theme.breakpoints.up("md")]: {
-      //=> mobile
-      width:"70%"
+      width: "70%",
     },
   }));
 
@@ -98,7 +86,6 @@ const Hero = () => {
                 textAlign="center"
                 pb={2}
               >
-                
                 Jean Will
               </Typography>
               <Typography
@@ -106,7 +93,6 @@ const Hero = () => {
                 variant="h2"
                 textAlign="center"
               >
-                
                 {typedText}
               </Typography>
               <Grid container display="flex" justifyContent="center" pt={3}>
@@ -135,10 +121,19 @@ const Hero = () => {
                   display="flex"
                   justifyContent="center"
                 >
-                  <Button color="secondary"  style={{textDecoration:"none"}}>
-                    <a href="mailto:jeanwill93@hotmail.com"  style={{ textDecoration: "none", color: "inherit" }} >
-                    <EmailIcon />
-                    <Typography>Contact me</Typography>
+                  <Button
+                    color="secondary"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <a
+                      href="mailto:jeanwill93@hotmail.com"
+                      style={{
+                        textDecoration: "none",
+                        color: "inherit",
+                      }}
+                    >
+                      <EmailIcon />
+                      <Typography>Contact me</Typography>
                     </a>
                   </Button>
                 </Grid>
@@ -152,4 +147,3 @@ const Hero = () => {
 };
 
 export default Hero;
-  
