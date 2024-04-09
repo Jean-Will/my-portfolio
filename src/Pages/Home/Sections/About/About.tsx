@@ -2,6 +2,9 @@ import { Typography, Card, CardActionArea, CardMedia, CardContent , styled } fro
 import Avatar from "../../../../assets/Images/avatar.jpg";
 import "./About.css";
 
+
+
+
 const About = () => {
 
   const StyledAbout = styled("div")(({ theme }) => ({
@@ -9,7 +12,9 @@ const About = () => {
     [theme.breakpoints.up("xs")]: {
       
     },
-    [theme.breakpoints.up("md")]: {},
+    [theme.breakpoints.up("md")]: {
+      
+    },
   }));
 
   return (
