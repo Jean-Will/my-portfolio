@@ -7,7 +7,8 @@ const About = () => {
     <>
       <div className="container">
         <div className="elemento card-animation">
-          <Card sx={{ maxWidth: 300 }}>
+          
+          <Card sx={{ maxWidth: 350 }}>
             <CardActionArea>
               <CardMedia
                 component="img"
@@ -27,7 +28,7 @@ const About = () => {
           </Card>
         </div>
         <div className="elemento card-animation">
-          <Card sx={{ maxWidth: 300 }}>
+          <Card sx={{ maxWidth: 350, }}>
             <CardActionArea>
               <CardMedia
                 component="img"
