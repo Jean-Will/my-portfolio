@@ -35,12 +35,11 @@ const About= () => {
       <StyledAbout>
       <div className="container">
         <div className="elemento" >
-        <Card sx={{ maxWidth: 345,  }}>
+        <Card sx={{ maxWidth: 300,  }}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="140"
-           
+          height="180"
           src={Avatar}/>
           
         <CardContent>
