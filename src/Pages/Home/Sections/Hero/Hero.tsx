@@ -1,36 +1,74 @@
-import { styled , Grid, Container, Typography , Button} from "@mui/material"
-import profile from "../../../../assets/Images/pofile.jpg"
-import DownloadIcon from '@mui/icons-material/Download';
-import EmailIcon from '@mui/icons-material/Email';
-
-
-
-
-
+import { styled, Grid, Container, Typography, Button } from "@mui/material";
+import profile from "../../../../assets/Images/pofile.jpg";
+import DownloadIcon from "@mui/icons-material/Download";
+import EmailIcon from "@mui/icons-material/Email";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  const [typedText, setTypedText] = useState("");
 
+  useEffect(() => {
+    const textToType = "I'm a Software Developer";
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      setTypedText((prevText) => {
+        if (index === textToType.length) {
+          clearInterval(typingInterval);
+          setTimeout(() => {
+            setTypedText("");
+            startTyping(); // reinicia a digitação após o intervalo de 15 segundos
+          }, 15000);
+          return prevText;
+        }
+        return prevText + textToType[index++];
+      });
+    }, 170);
 
+    return () => {
+      clearInterval(typingInterval);
+    };
+  }, []);
+
+  // Função para iniciar a digitação
+  const startTyping = () => {
+    const textToType = "I'm a Software Developer";
+    let index = 0;
+    const typingInterval = setInterval(() => {
+      setTypedText((prevText) => {
+        if (index === textToType.length) {
+          clearInterval(typingInterval);
+          setTimeout(() => {
+            setTypedText("");
+            startTyping(); // reinicia a digitação após o intervalo de 15 segundos
+          }, 15000);
+          return prevText;
+        }
+        return prevText + textToType[index++];
+      });
+    }, 170);
+  };
 
   const StyledHero = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
     height: "100vh",
     display: "flex",
-    alignItems:"center",
-    [theme.breakpoints.up("xs")]: {//<=mobile 
-      paddingTop:"100px"
-    
+    alignItems: "center",
+    [theme.breakpoints.up("xs")]: {
+      paddingTop: "100px",
     },
-    [theme.breakpoints.up("md")]: { //=> mobile 
-    
-    }
-
+    [theme.breakpoints.up("md")]: {},
   }));
 
-  const StyledImg = styled("img")(() => ({
+  const StyledImg = styled("img")(({ theme }) => ({
     width: "80%",
-    borderRadius: "30%",
-    border: "1px solid"
+    borderRadius: "18%",
+
+    [theme.breakpoints.up("xs")]: {
+      width: "55%",
+    },
+    [theme.breakpoints.up("md")]: {
+      width: "70%",
+    },
   }));
 
   return (
@@ -45,20 +83,19 @@ const Hero = () => {
               <Typography
                 color="primary.contrastText"
                 variant="h1"
-                textAlign="center" pb={2}
+                textAlign="center"
+                pb={2}
               >
-                {" "}
-                Jean Will{" "}
+                Jean Will
               </Typography>
               <Typography
                 color="primary.contrastText"
                 variant="h2"
-                textAlign="center" 
+                textAlign="center"
               >
-                {" "}
-                I'm a Software Developer {" "}
+                {typedText}
               </Typography>
-              <Grid container display="flex" justifyContent="center" pt={3} >
+              <Grid container display="flex" justifyContent="center" pt={3}>
                 <Grid
                   item
                   xs={12}
@@ -66,11 +103,15 @@ const Hero = () => {
                   display="flex"
                   justifyContent="center"
                 >
-                  <Button color="secondary" > 
-                  <a href="../" download style={{textDecoration:"none"}}>
-                  <DownloadIcon />
-                    <Typography>DOWLOAD CV</Typography>
-                  </a>
+                  <Button color="secondary">
+                    <a
+                      href="/Components/Pdf/JeanWill_Eng"
+                      download
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <DownloadIcon />
+                      <Typography>DOWLOAD CV</Typography>
+                    </a>
                   </Button>
                 </Grid>
                 <Grid
@@ -80,9 +121,20 @@ const Hero = () => {
                   display="flex"
                   justifyContent="center"
                 >
-                  <Button color="secondary" >
-                    <EmailIcon />
-                    <Typography>Contact me</Typography>
+                  <Button
+                    color="secondary"
+                    style={{ textDecoration: "none" }}
+                  >
+                    <a
+                      href="mailto:jeanwill93@hotmail.com"
+                      style={{
+                        textDecoration: "none",
+                        color: "inherit",
+                      }}
+                    >
+                      <EmailIcon />
+                      <Typography>Contact me</Typography>
+                    </a>
                   </Button>
                 </Grid>
               </Grid>
@@ -95,4 +147,3 @@ const Hero = () => {
 };
 
 export default Hero;
-  
