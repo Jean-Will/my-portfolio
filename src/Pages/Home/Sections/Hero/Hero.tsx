@@ -56,7 +56,8 @@ const Hero = () => {
     display: "flex",
     alignItems: "center",
     [theme.breakpoints.up("xs")]: {
-      paddingTop: "100px",
+      paddingTop: "60px",
+      
     },
     [theme.breakpoints.up("md")]: {},
   }));
@@ -72,6 +73,13 @@ const Hero = () => {
       width: "70%",
     },
   }));
+
+
+  
+
+
+
+
 
   return (
     <>
