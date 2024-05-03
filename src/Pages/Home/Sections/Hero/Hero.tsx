@@ -3,7 +3,7 @@ import profile from "../../../../assets/Images/pofile.jpg";
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import { useState, useEffect } from "react";
-import  JeanWill_Eng from '../../../../assets/Pdf/JeanWill_Eng.pdf';
+import  JeanWill_Eng from "../../../../assets/Pdf/JeanWill_Eng.pdf";
 
 
 const Hero = () => {
