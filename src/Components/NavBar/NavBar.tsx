@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, MenuItem, styled , List , ListItem , ClickAwayListener} from "@mui/material"
+import { AppBar, Toolbar, MenuItem, styled , List , ListItemButton , ClickAwayListener} from "@mui/material"
 import { useState } from "react";
 
 
@@ -33,11 +33,11 @@ const NavBar= () => {
             <MenuItem onClick={toggleProjects}>PROJECTS</MenuItem>
           </ClickAwayListener>
           {showProjects && (
-            <List style={{ position: "absolute", top: "100%", right: 0, maxWidth: "300px", zIndex: 1, opacity: 1, transition: "opacity 0.3s" }}>
-              <ListItem button component="a" href="https://sysbanking-angular.netlify.app/">1º Proj. Angular.js</ListItem>
-              <ListItem button component="a" href="https://retirement-react-js.netlify.app/">Logic in js</ListItem>
-              <ListItem button component="a" href="https://smartcalculator-js.netlify.app/">1ª Calc in Js</ListItem>
-              <ListItem button component="a" href="https://forms-javascript.netlify.app/">1ªForm in Js</ListItem>
+            <List style={{ position: "absolute", top: "100%", right: 0, maxWidth: "300px", zIndex: 1, opacity: 1, transition: "opacity 0.3s" , }}>
+              <ListItemButton component="a" href="https://sysbanking-angular.netlify.app/">1º Proj. Angular.js</ListItemButton>
+              
+              <ListItemButton component="a" href="https://smartcalculator-js.netlify.app/">1ª Calc in Js</ListItemButton>
+              <ListItemButton component="a" href="https://forms-javascript.netlify.app/">1ªForm in Js</ListItemButton>
             </List>
           )}
          
