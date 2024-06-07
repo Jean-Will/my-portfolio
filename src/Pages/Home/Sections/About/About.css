@@ -1,53 +1,56 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 75vh;
-    gap: 50px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    background: linear-gradient(45deg, #aaaaaa, #969595, #414141 ,#202020 , #212121);
-    background-size: 300% 300%;
-    animation: gradientAnimation 15s  ease infinite ;
-  }
-  
-  @keyframes gradientAnimation {
-    0% {
-      background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-  
-  .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: rgb(122, 122, 122);
-  }
-  
-  .avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-  }
-  
-  .card-content {
-    height: 320px;
-    flex-direction: column;
-    justify-content: center; /* Centraliza verticalmente */
-    text-align: center;
-    text-align: center;
-    
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  gap: 20px;
+  padding: 20px;
+  background: linear-gradient(45deg, #aaaaaa, #969595, #414141, #202020, #212121);
+  background-size: 300% 300%;
+  animation: gradientAnimation 15s ease infinite;
+}
 
+@media (min-width: 768px) {
+  .container {
+      flex-direction: row;
+      gap: 50px;
   }
-  
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: rgb(122, 122, 122);
+  max-width: 300px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.card-content {
+  padding: 10px;
+  height: auto;
+  text-align: center;
+}
