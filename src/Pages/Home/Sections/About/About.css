@@ -1,21 +1,22 @@
-.container {
+body, html {
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Evitar rolagem horizontal */
+}
+
+.gradient-background {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: auto;
-  gap: 20px;
-  padding: 20px;
+  min-height: 100vh; /* Ajustar para ocupar a altura total da viewport */
   background: linear-gradient(45deg, #aaaaaa, #969595, #414141, #202020, #212121);
   background-size: 300% 300%;
   animation: gradientAnimation 15s ease infinite;
-}
-
-@media (min-width: 768px) {
-  .container {
-      flex-direction: row;
-      gap: 50px;
-  }
+  padding: 20px; /* Adiciona padding para evitar que o conteúdo encoste nas bordas */
+  box-sizing: border-box;
 }
 
 @keyframes gradientAnimation {
@@ -30,27 +31,81 @@
   }
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px; /* Limita a largura máxima do contêiner */
+  padding: 0 20px; /* Adiciona padding nas laterais */
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap; /* Permite quebra de linha se necessário */
+  }
+}
+
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between; /* Garante que o conteúdo ocupe todo o espaço disponível */
   align-items: center;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: rgb(122, 122, 122);
+  width: calc(100% - 40px); /* Largura do card com padding */
   max-width: 300px;
+  box-sizing: border-box;
+  height: auto; /* Ajuste para altura automática */
+  overflow: hidden;
+  transition: height 0.3s ease; /* Transição suave para a mudança de altura */
+  margin: 0 auto;
 }
 
-.avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 20px;
+.card.expanded {
+  height: auto; /* Permite que o card expanda para mostrar todo o conteúdo */
 }
 
 .card-content {
   padding: 10px;
-  height: auto;
   text-align: center;
+  flex-grow: 1; /* Faz o conteúdo crescer para ocupar o espaço disponível */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-content p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6; /* Número máximo de linhas antes de truncar */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card.expanded .card-content p {
+  -webkit-line-clamp: unset; /* Remove truncamento quando expandido */
+}
+
+.card-action-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.read-more {
+  cursor: pointer;
+  color: #007bff;
+  text-decoration: none;
+  margin-top: 10px;
 }
