@@ -1,0 +1,15 @@
+.list-enter {
+    opacity: 0;
+  }
+  .list-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+  }
+  .list-exit {
+    opacity: 1;
+  }
+  .list-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+  }
+
