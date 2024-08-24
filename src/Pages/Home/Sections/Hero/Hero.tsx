@@ -3,7 +3,8 @@ import profile from "../../../../assets/Images/pofile.jpg";
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import { useState, useEffect } from "react";
-import  JeanWill_Eng from "../../../../assets/Pdf/Jean Will_Eng.pdf";
+import CV_ENG_JeanWill from "../../../../assets/Pdf/CV_ENG_JeanWill.pdf";
+import CV_PT_JeanWill from "../../../../assets/Pdf/CV_PT_JeanWill.pdf";
 
 
 const Hero = () => {
@@ -74,13 +75,6 @@ const Hero = () => {
     },
   }));
 
-
-  
-
-
-
-
-
   return (
     <>
       <StyledHero>
@@ -115,12 +109,30 @@ const Hero = () => {
                 >
                   <Button color="secondary">
                     <a
-                      href={JeanWill_Eng}
+                      href={CV_ENG_JeanWill}
                       download
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
                       <DownloadIcon />
-                      <Typography>DOWNLOAD CV</Typography>
+                      <Typography>DOWNLOAD CV (ENG)</Typography>
+                    </a>
+                  </Button>
+                </Grid>
+                <Grid
+                  item
+                  xs={12}
+                  md={4}
+                  display="flex"
+                  justifyContent="center"
+                >
+                  <Button color="secondary">
+                    <a
+                      href={CV_PT_JeanWill}
+                      download
+                      style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                      <DownloadIcon />
+                      <Typography>DOWNLOAD CV (PT)</Typography>
                     </a>
                   </Button>
                 </Grid>
