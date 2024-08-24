@@ -17,18 +17,18 @@ const About = () => {
   const cards = [
     {
       title: "Jean Will",
-      content: `I have some academic experience in JavaScript, React.Js, Angular.Js, this is only about FrontEnd.
-                Now in About BackEnd I have used C#.NET sometimes and SQL.
-                I have published my codes in GitHub since my first code,
-                so you can see my progress during this time and follow my skills developed and compare my first project with this project. Enjoy this journeys`
+      content: ` Since 2018, I have been a volunteer leader, guiding and training
+ youth for leadership positions. Focused on growing as a developer,
+ improving strengths, and delivering quality results.
+  I am a team player who motivates others and values a collaborative and
+ productive work environment.`
     },
     {
       title: "Education",
-      content: `I'm studying Systems Analysis and Development at Universidade Cidade de São Paulo (UNICID),
-                where I took some tests and my evaluations were very good.
-                I know I'm starting my studies, but I study every day, but not only at my university,
-                I have used some platforms like Microsoft Learn, Youtube, Google, Udemy among others.
-                I have studied a little about SCRUM agile methodologies where I have certification.`
+      content: `I'm studying Systems Analysis and Development at the City University of São Paulo (UNICID),
+       I'm in my second semester and my evaluations have been very good, and I'll graduate in December 2025.
+       I'm taking a programming and Python course at IEFP to complement my studies, which I'll finish in December 2024.
+       I have studied a little about SCRUM agile methodologies where I have certification.`
     }
   ];
 
