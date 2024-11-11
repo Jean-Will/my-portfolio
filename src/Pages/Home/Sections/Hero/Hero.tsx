@@ -3,8 +3,8 @@ import profile from "../../../../assets/Images/pofile.jpg";
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import { useState, useEffect } from "react";
-import JeanWill_CV_ENG from "../../../../assets/Pdf/JeanWill_CV_ENG.pdf";
-import JeanWill_CV_PT from "../../../../assets/Pdf/JeanWill_CV_PT.pdf";
+import JeanWill_CV_ENG from "../../../../assets/Pdf/CV_ENG_JeanWill.pdf";
+import JeanWill_CV_PT from "../../../../assets/Pdf/CV_PT_JeanWill.pdf";
 
 
 const Hero = () => {
