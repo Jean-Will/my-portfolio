@@ -3,8 +3,8 @@ import profile from "../../../../assets/Images/pofile.jpg";
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import { useState, useEffect } from "react";
-import JeanWill_CV_ENG from "../../../../assets/Pdf/CV_ENG_JeanWill.pdf";
-import JeanWill_CV_PT from "../../../../assets/Pdf/CV_PT_JeanWill.pdf";
+import JeanWill_ENG_CV from "../../../../assets/Pdf/JeanWill-CV-ENG.pdf";
+import JeanWill_PT_CV from "../../../../assets/Pdf/JeanWill-CV-PT.pdf";
 
 
 const Hero = () => {
@@ -109,7 +109,7 @@ const Hero = () => {
                 >
                   <Button color="secondary">
                     <a
-                      href={JeanWill_CV_ENG}
+                      href={JeanWill_ENG_CV}
                       download
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
@@ -127,7 +127,7 @@ const Hero = () => {
                 >
                   <Button color="secondary">
                     <a
-                      href={JeanWill_CV_PT}
+                      href={JeanWill_PT_CV}
                       download
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
