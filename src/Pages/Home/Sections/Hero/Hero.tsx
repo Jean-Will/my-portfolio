@@ -3,7 +3,7 @@ import profile from "../../../../assets/Images/pofile.jpg";
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import { useState, useEffect } from "react";
-import JeanWill_ENG from "../../../../assets/Pdf/JeanWill_ENG.pdf";
+import ENG_JeanWill from "../../../../assets/Pdf/ENG_JeanWill.pdf";
 import JeanWill_PT from "../../../../assets/Pdf/JeanWill_PT.pdf";
 
 
@@ -109,7 +109,7 @@ const Hero = () => {
                 >
                   <Button color="secondary">
                     <a
-                      href={JeanWill_ENG}
+                      href={ENG_JeanWill}
                       download
                       style={{ textDecoration: "none", color: "inherit" }}
                     >

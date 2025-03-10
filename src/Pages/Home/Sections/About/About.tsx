@@ -26,7 +26,7 @@ const About = () => {
     {
       title: "Education",
       content: `I'm studying Systems Analysis and Development at the City University of São Paulo (UNICID),
-       I'm in my second semester and my evaluations have been very good, and I'll graduate in December 2025.
+       I'm in my third semester and my evaluations have been very good, and I'll graduate in December 2025.
        I'm taking a programming and Python course at IEFP to complement my studies, which I'll finish in December 2024.
        I have studied a little about SCRUM agile methodologies where I have certification.`
     }
