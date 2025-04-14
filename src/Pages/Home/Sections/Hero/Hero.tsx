@@ -4,7 +4,7 @@ import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import { useState, useEffect } from "react";
 import ENG_JeanWill from "../../../../assets/Pdf/ENG_JeanWill.pdf";
-import JeanWill_PT from "../../../../assets/Pdf/JeanWill_PT.pdf";
+import PT_JeanWill from "../../../../assets/Pdf/PT_JeanWill.pdf";
 
 
 const Hero = () => {
@@ -127,7 +127,7 @@ const Hero = () => {
                 >
                   <Button color="secondary">
                     <a
-                      href={JeanWill_PT}
+                      href={PT_JeanWill}
                       download
                       style={{ textDecoration: "none", color: "inherit" }}
                     >
