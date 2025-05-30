@@ -4,7 +4,7 @@ import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import { useState, useEffect } from "react";
 import ENG_JeanWill from "../../../../assets/Pdf/ENG_JeanWill.pdf";
-import PTJeanWill from "../../../../assets/Pdf/PT_JeanWill.pdf";
+import PTJeanWill from "../../../../assets/Pdf/JeanWill-CV-PT1.pdf";
 
 
 const Hero = () => {
