@@ -63,13 +63,13 @@ const NavBar = () => {
                   }}
                 >
                   <ListItemButton component="a" href="https://sysbanking-angular.netlify.app/">
-                    <Typography variant="body1">1º Proj. Angular.js</Typography>
+                    <Typography variant="body1">Angular Project </Typography>
                   </ListItemButton>
-                  <ListItemButton component="a" href="https://smartcalculator-js.netlify.app/">
-                    <Typography variant="body1">1ª Calc in Js</Typography>
+                  <ListItemButton component="a" href="https://youtu.be/cKmxXSjsnos">
+                    <Typography variant="body1">Medical appointments manager </Typography>
                   </ListItemButton>
-                  <ListItemButton component="a" href="https://forms-javascript.netlify.app/">
-                    <Typography variant="body1">1ª Form in Js</Typography>
+                  <ListItemButton component="a" href="https://youtube.com/shorts/wUSwRjGfT2U?feature=share">
+                    <Typography variant="body1">Stock Management </Typography>
                   </ListItemButton>
                 </List>
               </CSSTransition>
