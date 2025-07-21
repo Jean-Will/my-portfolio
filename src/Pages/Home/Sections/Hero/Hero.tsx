@@ -3,8 +3,8 @@ import profile from "../../../../assets/Images/pofile.jpg";
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import { useState, useEffect } from "react";
-import ENG_JeanWill from "../../../../assets/Pdf/JeanWill-CV-ENG11.pdf";
-import PTJeanWill from "../../../../assets/Pdf/JeanWill-CV-PT1.pdf";
+import ENG_JeanWill from "../../../../assets/Pdf/JeanWill_CV_SoftwareDeveloper_2025.pdf";
+/*import PTJeanWill from "../../../../assets/Pdf/JeanWill-CV-PT1.pdf"; */
 
 
 const Hero = () => {
@@ -125,6 +125,7 @@ const Hero = () => {
                   display="flex"
                   justifyContent="center"
                 >
+                {/* 
                   <Button color="secondary">
                     <a
                       href={PTJeanWill}
@@ -143,6 +144,9 @@ const Hero = () => {
                   display="flex"
                   justifyContent="center"
                 >
+
+                */}
+
                   <Button
                     color="secondary"
                     style={{ textDecoration: "none" }}
