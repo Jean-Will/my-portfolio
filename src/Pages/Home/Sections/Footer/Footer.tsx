@@ -7,9 +7,10 @@ const Footer = () => {
   return (
     <BottomNavigation
       sx={{
-        backgroundColor: '#414141',
+        backgroundColor: '#0f0f0f60', 
         padding: '10px',
         textAlign: 'center',
+        
       }}
     >
       <BottomNavigationAction

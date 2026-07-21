@@ -62,6 +62,11 @@ const NavBar = () => {
                     zIndex: 1 
                   }}
                 >
+
+                    <ListItemButton component="a" href="https://studio-minucelli.vercel.app/">
+                    <Typography variant="body1">Estudio Minucelli </Typography>
+                  </ListItemButton>
+
                   <ListItemButton component="a" href="https://sysbanking-angular.netlify.app/">
                     <Typography variant="body1">Angular Project </Typography>
                   </ListItemButton>
@@ -71,6 +76,9 @@ const NavBar = () => {
                   <ListItemButton component="a" href="https://youtube.com/shorts/wUSwRjGfT2U?feature=share">
                     <Typography variant="body1">Stock Management </Typography>
                   </ListItemButton>
+
+                 
+
                 </List>
               </CSSTransition>
             </div>

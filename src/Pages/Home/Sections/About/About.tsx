@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Typography, Card, CardActionArea, CardMedia, CardContent } from "@mui/material";
-//import Avatar from "../../../../assets/Images/avatar.jpg";
+import Avatar from "../../../../assets/Images/avatar.jpg";
 // image to education section
 import jw from "../../../../assets/Images/jw.jpeg";
 import "./About.css";
@@ -19,6 +19,7 @@ const About = () => {
   const cards = [
     {
       title: "Jean Will",
+      image: jw,
       content: ` Since 2018, I have been a volunteer leader, guiding and training
       youth for leadership positions. Focused on growing as a developer,
       improving strengths, and delivering quality results.
@@ -27,6 +28,7 @@ const About = () => {
     },
     {
       title: "Education",
+      image: Avatar,
       content: `I am a Full-Stack Developer with a degree in Systems Analysis and Development 
       from UNICID (Universidade Cidade de São Paulo), and I am currently enrolled in CINEL’s 
       CET program to become a Specialist in Information Systems Technology and Programming.
@@ -50,7 +52,7 @@ const About = () => {
                 <CardMedia
                   component="img"
                   height="180"
-                  image={jw}
+                  image={card.image}
                   alt="Avatar"
                 />
                 <CardContent className="card-content">
