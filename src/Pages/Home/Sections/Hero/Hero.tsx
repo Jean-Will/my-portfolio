@@ -1,11 +1,13 @@
 import { styled, Grid, Container, Typography, Button } from "@mui/material";
-import profile from "../../../../assets/Images/pofile.jpg";
+//import profile from "../../../../assets/Images/pofile.jpg";
+// first image in the page
+import jw1 from "../../../../assets/Images/Jw1.jpeg";
+
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import { useState, useEffect } from "react";
-import ENG_JeanWill from "../../../../assets/Pdf/JeanWill_CV_SoftwareDeveloper_2025.pdf";
 /*import PTJeanWill from "../../../../assets/Pdf/JeanWill-CV-PT1.pdf"; */
-
+import ENG_JeanWill from "../../../../assets/Pdf/JeanWill_CV_062026_Eng.pdf";
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
@@ -81,7 +83,7 @@ const Hero = () => {
         <Container maxWidth="lg">
           <Grid container spacing={2}>
             <Grid item xs={12} md={4}>
-              <StyledImg src={profile} />
+              <StyledImg src={jw1} />
             </Grid>
             <Grid item xs={12} md={8}>
               <Typography

@@ -25,7 +25,7 @@ const Footer = () => {
           Criado por Jean Will
         </Typography>
         <Typography variant="body2" color="textSecondary" sx={{ mt: 0.4 }}>
-          © 2024 Todos os direitos reservados.
+          © 2026 Todos os direitos reservados.
         </Typography>
       </div>
       <BottomNavigationAction

@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Typography, Card, CardActionArea, CardMedia, CardContent } from "@mui/material";
-import Avatar from "../../../../assets/Images/avatar.jpg";
+//import Avatar from "../../../../assets/Images/avatar.jpg";
+// image to education section
+import jw from "../../../../assets/Images/jw.jpeg";
 import "./About.css";
 
 const About = () => {
@@ -18,17 +20,23 @@ const About = () => {
     {
       title: "Jean Will",
       content: ` Since 2018, I have been a volunteer leader, guiding and training
- youth for leadership positions. Focused on growing as a developer,
- improving strengths, and delivering quality results.
-  I am a team player who motivates others and values a collaborative and
- productive work environment.`
+      youth for leadership positions. Focused on growing as a developer,
+      improving strengths, and delivering quality results.
+      I am a team player who motivates others and values a collaborative and
+      productive work environment.`
     },
     {
       title: "Education",
-      content: `I'm studying Systems Analysis and Development at the City University of São Paulo (UNICID),
-       I'm in my third semester and my evaluations have been very good, and I'll graduate in December 2025.
-       I'm taking a programming and Python course at IEFP to complement my studies, which I'll finish in December 2024.
-       I have studied a little about SCRUM agile methodologies where I have certification.`
+      content: `I am a Full-Stack Developer with a degree in Systems Analysis and Development 
+      from UNICID (Universidade Cidade de São Paulo), and I am currently enrolled in CINEL’s 
+      CET program to become a Specialist in Information Systems Technology and Programming.
+
+      I have practical experience in web development, testing, documentation, and application maintenance,
+       gained through both professional and personal projects. 
+       I have also developed skills in requirements analysis, information security, and data validation.
+
+  I continue to deepen my knowledge of software development, with a focus on best practices,
+   clean code, and continuous technical growth.`
     }
   ];
 
@@ -42,7 +50,7 @@ const About = () => {
                 <CardMedia
                   component="img"
                   height="180"
-                  image={Avatar}
+                  image={jw}
                   alt="Avatar"
                 />
                 <CardContent className="card-content">
