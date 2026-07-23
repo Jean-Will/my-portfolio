@@ -1,0 +1,26 @@
+.aurora-background {
+  position: fixed;
+  inset: 0;
+
+  z-index: 0;
+
+  background:
+    radial-gradient(circle at 20% 20%, #2563eb, transparent 40%),
+    radial-gradient(circle at 80% 30%, #9333ea, transparent 40%),
+    radial-gradient(circle at 50% 80%, #06b6d4, transparent 40%);
+
+  filter: blur(50px);
+
+  animation: auroraMove 12s infinite alternate;
+}
+
+
+@keyframes auroraMove {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.3);
+  }
+}
