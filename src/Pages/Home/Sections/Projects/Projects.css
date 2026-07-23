@@ -1,0 +1,22 @@
+body, html {
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Evitar rolagem horizontal */
+  align-items: center;
+  background-color: rgb(196, 199, 199);
+}
+
+.gradient-background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Ajustar para ocupar a altura total da viewport */
+  background: linear-gradient(45deg, #aaaaaa, #969595, #414141, #202020, #212121);
+  background-size: 300% 300%;
+  animation: gradientAnimation 15s ease infinite;
+  padding: 20px; /* Adiciona padding para evitar que o conteúdo encoste nas bordas */
+  box-sizing: border-box;
+}
