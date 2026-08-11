@@ -32,7 +32,7 @@ const Footer = () => {
       <BottomNavigationAction
         label="LinkedIn"
         icon={<LinkedInIcon />}
-        href="https://www.linkedin.com/in/jean-will-webdeveloper/"
+        href="https://www.linkedin.com/in/jean-will-softwaredeveloper/"
         target="_blank"
         rel="noopener noreferrer"
       />

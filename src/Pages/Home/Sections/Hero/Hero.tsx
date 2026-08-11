@@ -1,57 +1,53 @@
 import { styled, Grid, Container, Typography, Button } from "@mui/material";
-//import profile from "../../../../assets/Images/pofile.jpg";
-// first image in the page
 import jw1 from "../../../../assets/Images/Jw1.jpeg";
-
 import DownloadIcon from "@mui/icons-material/Download";
 import EmailIcon from "@mui/icons-material/Email";
 import { useState, useEffect } from "react";
-/*import PTJeanWill from "../../../../assets/Pdf/JeanWill-CV-PT1.pdf"; */
 import ENG_JeanWill from "../../../../assets/Pdf/JeanWill_CV_062026_Eng.pdf";
 
 const Hero = () => {
   const [typedText, setTypedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
 
   useEffect(() => {
     const textToType = "I'm a Software Developer";
     let index = 0;
-    const typingInterval = setInterval(() => {
-      setTypedText((prevText) => {
-        if (index === textToType.length) {
-          clearInterval(typingInterval);
-          setTimeout(() => {
-            setTypedText("");
-            startTyping(); // reinicia a digitação após o intervalo de 15 segundos
-          }, 15000);
-          return prevText;
-        }
-        return prevText + textToType[index++];
-      });
-    }, 170);
+    let timeoutId: ReturnType<typeof setTimeout>;
 
-    return () => {
-      clearInterval(typingInterval);
+    const type = () => {
+      timeoutId = setTimeout(() => {
+        if (!isDeleting) {
+          // Digitando
+          setTypedText(textToType.slice(0, index + 1));
+          index++;
+
+          if (index > textToType.length) {
+            // Terminou de digitar, espera e começa a apagar
+            setIsDeleting(true);
+            type();
+          } else {
+            type();
+          }
+        } else {
+          // Apagando
+          setTypedText(textToType.slice(0, index - 1));
+          index--;
+
+          if (index === 0) {
+            // Terminou de apagar, espera e começa a digitar de novo
+            setIsDeleting(false);
+            setTimeout(type, 15000); // 15s parado antes de reiniciar
+          } else {
+            type();
+          }
+        }
+      }, isDeleting ? 100 : 170); // mais rápido para apagar
     };
-  }, []);
 
-  // Função para iniciar a digitação
-  const startTyping = () => {
-    const textToType = "I'm a Software Developer";
-    let index = 0;
-    const typingInterval = setInterval(() => {
-      setTypedText((prevText) => {
-        if (index === textToType.length) {
-          clearInterval(typingInterval);
-          setTimeout(() => {
-            setTypedText("");
-            startTyping(); // reinicia a digitação após o intervalo de 15 segundos
-          }, 15000);
-          return prevText;
-        }
-        return prevText + textToType[index++];
-      });
-    }, 170);
-  };
+    type();
+
+    return () => clearTimeout(timeoutId);
+  }, [isDeleting]);
 
   const StyledHero = styled("div")(({ theme }) => ({
     backgroundColor: theme.palette.primary.main,
@@ -60,7 +56,6 @@ const Hero = () => {
     alignItems: "center",
     [theme.breakpoints.up("xs")]: {
       paddingTop: "60px",
-      
     },
     [theme.breakpoints.up("md")]: {},
   }));
@@ -68,7 +63,6 @@ const Hero = () => {
   const StyledImg = styled("img")(({ theme }) => ({
     width: "80%",
     borderRadius: "18%",
-
     [theme.breakpoints.up("xs")]: {
       width: "55%",
     },
@@ -127,28 +121,6 @@ const Hero = () => {
                   display="flex"
                   justifyContent="center"
                 >
-                {/* 
-                  <Button color="secondary">
-                    <a
-                      href={PTJeanWill}
-                      download
-                      style={{ textDecoration: "none", color: "inherit" }}
-                    >
-                      <DownloadIcon />
-                      <Typography>DOWNLOAD CV (PT)</Typography>
-                    </a>
-                  </Button>
-                </Grid>
-                <Grid
-                  item
-                  xs={12}
-                  md={4}
-                  display="flex"
-                  justifyContent="center"
-                >
-
-                */}
-
                   <Button
                     color="secondary"
                     style={{ textDecoration: "none" }}

@@ -1,0 +1,68 @@
+ {/*  
+  {
+    id: 2,
+    title: "E-commerce de Produtos",
+    description:
+      "Loja virtual com catálogo de produtos, filtros, carrinho de compras e layout adaptado para dispositivos móveis.",
+    category: "Clientes",
+    technologies: ["React", "JavaScript", "API"],
+    year: "2026",
+    status: "Concluído",
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80",
+    liveUrl: "https://seusite.com",
+    githubUrl: "https://github.com/seuusuario/ecommerce",
+  },
+  {
+    id: 3,
+    title: "Dashboard Financeiro",
+    description:
+      "Painel para visualização de receitas, despesas e indicadores financeiros com gráficos interativos.",
+    category: "Clientes",
+    technologies: ["React", "TypeScript", "Charts"],
+    year: "2026",
+    status: "Concluído",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80",
+    liveUrl: "https://seusite.com",
+  },
+  {
+    id: 4,
+    title: "Aplicação com Python",
+    description:
+      "Projeto de estudos criado para praticar lógica de programação, integração com banco de dados e criação de APIs.",
+    category: "Estudos",
+    technologies: ["Python", "FastAPI", "SQLite"],
+    year: "2026",
+    status: "Em desenvolvimento",
+    image:
+      "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=900&q=80",
+    githubUrl: "https://github.com/seuusuario/projeto-python",
+  },
+  {
+    id: 5,
+    title: "Sistema de Tarefas",
+    description:
+      "Aplicação desenvolvida para aprender gerenciamento de estado, componentes reutilizáveis e persistência de dados.",
+    category: "Estudos",
+    technologies: ["React", "TypeScript", "LocalStorage"],
+    year: "2026",
+    status: "Concluído",
+    image:
+      "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?auto=format&fit=crop&w=900&q=80",
+    githubUrl: "https://github.com/seuusuario/task-manager",
+  },
+  {
+    id: 6,
+    title: "API de Autenticação",
+    description:
+      "Projeto experimental para estudar autenticação de usuários, tokens JWT e proteção de rotas.",
+    category: "Estudos",
+    technologies: ["Node.js", "Express", "JWT"],
+    year: "2026",
+    status: "Concluído",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=80",
+    githubUrl: "https://github.com/seuusuario/auth-api",
+  },  
+     */}

@@ -1,5 +1,5 @@
 import { AppBar, Toolbar, styled, List, ListItemButton, ClickAwayListener, Typography, IconButton } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -26,17 +26,33 @@ const NavBar = () => {
     setShowProjects(false);
   };
 
+// Close navbar when scrolling down
+useEffect(() => {
+  const handleScroll = () => {
+    if (showProjects) {
+      setShowProjects(false);
+    }
+  };
+
+  window.addEventListener("scroll", handleScroll, true);
+
+  return () => {
+    window.removeEventListener("scroll", handleScroll, true);
+  };
+}, [showProjects]);
+
+
   return (
-    <AppBar position="absolute">
+    <AppBar position="fixed">
       <StyledToolbar>
         <Typography variant="h6" component="div">
           Welcome to My Portfolio
         </Typography>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <IconButton component="a" href="https://github.com/Jean-Will" color="inherit">
+          <IconButton component="a" href="https://github.com/Jean-Will" color="inherit" target="_blank" rel="noopener noreferrer">
             <GitHubIcon />
           </IconButton>
-          <IconButton component="a" href="https://www.linkedin.com/in/jean-will-webdeveloper/" color="inherit">
+          <IconButton component="a" href="https://www.linkedin.com/in/jean-will-softwaredeveloper/" color="inherit" target="_blank" rel="noopener noreferrer">
             <LinkedInIcon />
           </IconButton>
           <ClickAwayListener onClickAway={handleClickAway}>
@@ -63,17 +79,20 @@ const NavBar = () => {
                   }}
                 >
 
-                    <ListItemButton component="a" href="https://studio-minucelli.vercel.app/">
+                   <ListItemButton component = "a" href="https://telhasclean.pt" target="_blank" rel="noopener noreferrer">
+                    <Typography variant="body1">Telhas Clean </Typography>
+                  </ListItemButton>
+                    <ListItemButton component="a" href="https://studio-minucelli.vercel.app/" target="_blank" rel="noopener noreferrer">
                     <Typography variant="body1">Estudio Minucelli </Typography>
                   </ListItemButton>
 
-                  <ListItemButton component="a" href="https://sysbanking-angular.netlify.app/">
+                  <ListItemButton component="a" href="https://sysbanking-angular.netlify.app/" target="_blank" rel="noopener noreferrer">
                     <Typography variant="body1">Angular Project </Typography>
                   </ListItemButton>
-                  <ListItemButton component="a" href="https://youtu.be/cKmxXSjsnos">
+                  <ListItemButton component="a" href="https://youtu.be/cKmxXSjsnos" target="_blank" rel="noopener noreferrer">
                     <Typography variant="body1">Medical appointments manager </Typography>
                   </ListItemButton>
-                  <ListItemButton component="a" href="https://youtube.com/shorts/wUSwRjGfT2U?feature=share">
+                  <ListItemButton component="a" href="https://youtube.com/shorts/wUSwRjGfT2U?feature=share" target="_blank" rel="noopener noreferrer">
                     <Typography variant="body1">Stock Management </Typography>
                   </ListItemButton>
 
