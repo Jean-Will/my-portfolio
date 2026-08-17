@@ -57,8 +57,8 @@ function Projects() {
           <span className="projects-eyebrow">Meu portfólio</span>
 
           <h1>
-            Projetos que transformam
-            <span> ideias em experiências digitais.</span>
+            Projetos que desenvolvi 
+            <span> ao longo do meu percuso de aprendizagem.</span>
           </h1>
 
           <p>
@@ -105,12 +105,11 @@ function Projects() {
         <div className="projects-section__header">
           <div>
             <span className="projects-eyebrow">Portfólio</span>
-            <h2>Projetos selecionados</h2>
+            <h2>Projetos </h2>
           </div>
 
           <p>
-            Uma seleção de trabalhos profissionais e projetos desenvolvidos
-            para evoluir minhas habilidades.
+            Confira os meus projetos para clientes e aprendizado durante os anos.
           </p>
         </div>
 
