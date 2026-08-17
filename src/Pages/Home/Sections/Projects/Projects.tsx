@@ -54,20 +54,20 @@ function Projects() {
     <main className="projects-page">
       <section className="projects-hero">
         <div className="projects-hero__content">
-          <span className="projects-eyebrow">Meu portfólio</span>
+          <span className="projects-eyebrow">My Portfolio</span>
 
           <h1>
-            Projetos que desenvolvi 
-            <span> ao longo do meu percuso de aprendizagem.</span>
+            Projects I've developed 
+            <span> throughout my learning journey.</span>
           </h1>
 
           <p>
-            Conheça alguns dos projetos desenvolvidos para clientes e também
-            experimentos criados durante minha jornada de aprendizado.
+            Check out some of the projects I've developed for clients, as well as
+            experiments I've created during my learning journey.
           </p>
 
           <a className="projects-hero__button" href="#projects-list">
-            Ver projetos
+            View projects
             <span aria-hidden="true">↓</span>
           </a>
         </div>
@@ -109,7 +109,7 @@ function Projects() {
           </div>
 
           <p>
-            Confira os meus projetos para clientes e aprendizado durante os anos.
+            Check out my client projects and what I've learned over the years.
           </p>
         </div>
 
@@ -177,7 +177,7 @@ function Projects() {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Ver projeto
+                      View project
                       <span aria-hidden="true">↗</span>
                     </a>
                   )}
@@ -201,7 +201,7 @@ function Projects() {
 
         {filteredProjects.length === 0 && (
           <div className="projects-empty">
-            Nenhum projeto encontrado nessa categoria.
+            No projects found in this category.
           </div>
         )}
       </section>
