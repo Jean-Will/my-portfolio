@@ -13,7 +13,7 @@ interface Project {
   category: Exclude<ProjectCategory, "Todos">;
   technologies: string[];
   year: string;
-  status: "Concluído" | "Em desenvolvimento";
+  status: "Completed" | "In development";
   image: string;
   liveUrl?: string;
   githubUrl?: string;
@@ -24,11 +24,11 @@ const projects: Project[] = [
     id: 1,
     title: "Landing Page Empresarial",
     description:
-      "Site institucional desenvolvido para apresentar os serviços, diferenciais e informações de contato de uma empresa.",
+      "An institutional website developed to showcase a company's services, unique features, and contact information.",
     category: "Clientes",
     technologies: ["React", "TypeScript", "DNS", "Hospedagem"," SEO","SSL"],
     year: "2026",
-    status: "Concluído",
+    status: "Completed",
     image: telhasCleanImage, // Usando a imagem importada
     liveUrl: "https://telhasclean.pt",
   } ,
@@ -151,7 +151,7 @@ function Projects() {
                   <span>{project.year}</span>
                   <span
                     className={`project-status ${
-                      project.status === "Concluído"
+                      project.status === "Completed"
                         ? "project-status--done"
                         : "project-status--progress"
                     }`}

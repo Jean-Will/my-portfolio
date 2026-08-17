@@ -34,7 +34,7 @@
     category: "Estudos",
     technologies: ["Python", "FastAPI", "SQLite"],
     year: "2026",
-    status: "Em desenvolvimento",
+    status: "In development",
     image:
       "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?auto=format&fit=crop&w=900&q=80",
     githubUrl: "https://github.com/seuusuario/projeto-python",
