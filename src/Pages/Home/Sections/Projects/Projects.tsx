@@ -26,7 +26,7 @@ const projects: Project[] = [
     description:
       "An institutional website developed to showcase a company's services, unique features, and contact information.",
     category: "Clientes",
-    technologies: ["React", "TypeScript", "DNS", "Hospedagem"," SEO","SSL"],
+    technologies: ["React", "TypeScript", "DNS", "Hosting"," SEO","SSL"],
     year: "2026",
     status: "Completed",
     image: telhasCleanImage, // Usando a imagem importada
